@@ -2,15 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CodersLab</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Our first app- Team II</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
 
+<header>
+    <h1>Nasza pierwsza wspolna aplikacja</h1>
+    <p>Opis...</p>
+</header>
 
+<section class="sortButtons">
+    <button id="byDate"> Sort by date</button>
+    <button id="byPrior">Sort by priority</button>
+    <button id="byWhatToDo">Sort by what to do next</button>
+    <button id="byWhatsDone">Sort what's done</button>
+</section>
 
+<section class="table">
+    <table id="tasks">
+        <tbody>
+        <tr>
+            <td colspan="5">Lista wszystkich wprowadzonych zadan</td>
+        </tr>
+        <tr>
+            <td>Tytul zadania</td>
+            <td>Termin wykonania</td>
+            <td>Priorytet</td>
+            <td>Opis</td>
+            <td>Czy wykonane</td>
+        </tr>
+        <tr>
+            <td>Przykladowe zadanie numer 1</td>
+            <td>2017-11-29</td>
+            <td>1</td>
+            <td>Wykonanie naszej pierwszej aplikacji</td>
+            <td>false</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 
+<section class="addRecord">
+
+    <form>
+        <div class="formGroup">
+            <label>
+                Tytul zadania:
+                <input type="text" id="title" name="title">
+            </label>
+            <label>
+                Termin wykonania:
+                <input type="text" id="date" name="date">
+            </label>
+            <label>
+                Priorytet:
+                <input type="text" id="prior" name="prior">
+            </label>
+            <label>
+                Opis:
+                <input type="text" id="desc" name="desc">
+            </label>
+            <label>
+                Czy zadanie wykonane ?:
+                <input type="checkbox" id="done" name="done">
+            </label>
+        </div>
+        <p>
+            <button class='btnPrimary'>Zatwierdź</button>
+        </p>
+    </form>
+
+</section>
+
+<footer class="authors">
+    <p>Team II</p>
+</footer>
 
 </body>
-<script src="js/app.js"></script>
 </html>

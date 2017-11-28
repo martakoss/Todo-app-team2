@@ -21,28 +21,23 @@
     <button id="byWhatsDone">Sort what's done</button>
 </section>
 
-<section class="table">
-    <table id="tasks">
-        <tbody>
-        <tr>
-            <td colspan="5">Lista wszystkich wprowadzonych zadan</td>
-        </tr>
-        <tr>
-            <td>Tytul zadania</td>
-            <td>Termin wykonania</td>
-            <td>Priorytet</td>
-            <td>Opis</td>
-            <td>Czy wykonane</td>
-        </tr>
-        <tr>
-            <td>Przykladowe zadanie numer 1</td>
-            <td>2017-11-29</td>
-            <td>1</td>
-            <td>Wykonanie naszej pierwszej aplikacji</td>
-            <td>false</td>
-        </tr>
-        </tbody>
-    </table>
+<section class="lists">
+
+    <ul>
+        <li>Tytul zadania</li>
+        <li>Data wykonania</li>
+        <li>Klasa priorytetu (1-5)</li>
+        <li>Opis naszego zadania</li>
+        <li>Czy zadanie zostalo wykonane (True, False)</li>
+    </ul>
+    <ul>
+        <li>Pierwsze przykladowe zadanie</li>
+        <li>2017-12-01</li>
+        <li>3</li>
+        <li>Nasza pierwsza wspolna aplikacja</li>
+        <li>False</li>
+    </ul>
+
 </section>
 
 <section class="addRecord">
@@ -59,7 +54,13 @@
             </label>
             <label>
                 Priorytet:
-                <input type="text" id="prior" name="prior">
+                <select id="prior" name="prior">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
             </label>
             <label>
                 Opis:

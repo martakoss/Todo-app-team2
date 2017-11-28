@@ -41,7 +41,7 @@ Zapisać całą tablicę do localStorage
 	
 		
 		
-			var Con = function(lastId, id, title, date, priority, description, done, addToArr)
+			var Con = function(lastId, id, title, date, priority, description, done)
 			{
 				lastId = tasks[tasks.length-1].id;	
 				this.id = lastId + 1;

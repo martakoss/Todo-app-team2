@@ -1,16 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>CodersLab</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<title>Dokument bez tytułu</title>
 </head>
+
 <body>
 
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <form name = "toDo">
+  <input type="number" name="myId" placeholder="#id">
+  <input type="text" name="myInput" placeholder="Title...">
+  <input type="date" name="myDate" placeholder="Date">
+  <input type="number" name="myPrior" placeholder="#priority">
+  <input type="text" name="myDesc" placeholder="description...">
+  <input type="text" name="myStatus" placeholder="is it completed...">
+  <input type="button" name = "addM" value="Add">
+  </form>
+</div>
 
+<ul id="myUL">
+
+  <ul class = 'number1'>
+  	 <li>1</li>
+ 	 <li>Zrobic zakupy</li>
+  	 <li>Date</li>
+     <li>2</li>
+     <li>Zrobic zakupy</li>
+     <li>completed: true</li> 
+  </ul>
+  
+   <ul class = 'number1'>
+  	 <li>2</li>
+ 	 <li>Zapłacic rachunki</li>
+  	 <li>Date</li>
+     <li>1</li>
+     <li>Zapłacic rachunki</li>
+     <li>completed: false</li> 
+  </ul>
+  
+
+  
+</ul>
 
 
 
 </body>
-<script src="js/app.js"></script>
+
 </html>

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         newUl.appendChild(newLiDesc);
 
         var newLiDone = document.createElement("li");
-        newLiDone.innerText = listDone.value;
+        newLiDone.innerText = listDone.checked;
         newUl.appendChild(newLiDone);
 
         herePush.appendChild(newUl);

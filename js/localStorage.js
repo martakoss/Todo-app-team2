@@ -17,7 +17,7 @@ var tasks = [
 
 
 // zapis do local storage
-localStorage.setItem('tasks', JSON.stringify(tasks));
+localStorage.setItem('todo_list', JSON.stringify(tasks));
 
 
 
@@ -29,7 +29,7 @@ if(localStorage.length===0) {
     console.log('ls puste');
     //jestli local storage nie jest puste wczytuje zapisana tablice
 } else {
-    var lsTasks = JSON.parse(localStorage.getItem('tasks'));
+    var lsTasks = JSON.parse(localStorage.getItem('todo_list'));
     console.log('wczytanie z ls');
 }
 

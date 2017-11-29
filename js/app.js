@@ -45,6 +45,7 @@ Zapisać całą tablicę do localStorage - jest
 */		
 
 
+<<<<<<< HEAD
 			var vTab = JSON.parse( localStorage.getItem('todo_list') );
 
 			function validiate()
@@ -63,6 +64,11 @@ Zapisać całą tablicę do localStorage - jest
 			}
 			validiate();
 			
+=======
+	
+		
+		
+>>>>>>> 65a8b277141740c7fd500193e8c80dfde2e4d402
 			var Con = function(lastId, id, title, date, priority, description, done)
 			{
 				lastId = tasks[tasks.length-1].id;	

@@ -1,0 +1,15 @@
+*{
+    list-style: none;
+}
+
+body {
+    background: grey;
+}
+
+ul {
+    background: red;
+}
+
+.hide {
+    background: green;
+}

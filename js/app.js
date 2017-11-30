@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var ul = document.querySelector('ul');
 
-        var tasks = JSON.parse(localStorage.getItem('tasks'));
+        var tasks = JSON.parse(localStorage.getItem('todo_list'));
 
 
 // i przechodzi po wszystkich elementach i laduje je na stronie

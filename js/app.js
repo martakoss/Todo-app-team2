@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //zapisanie tablicy z taskami do local stotage
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        localStorage.setItem('todo_list', JSON.stringify(tasks));
 
 
 
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             console.log(tasks);
-            localStorage.setItem('tasks', JSON.stringify(tasks));
+            localStorage.setItem('todo_list', JSON.stringify(tasks));
             location.reload();
 
         });
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             console.log(tasks);
-            localStorage.setItem('tasks', JSON.stringify(tasks));
+            localStorage.setItem('todo_list', JSON.stringify(tasks));
             location.reload();
 
         });

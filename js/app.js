@@ -36,7 +36,7 @@ var tasks = [
 
 /*
 
-Walidacja danych - do dodania
+Walidacja danych - jest
 Pobrać nowe id (patrz subtask) - jest
 Utworzyć obiekt z nowym zadaniem - jest
 Dodać obiekt do tablicy - jest
@@ -94,11 +94,11 @@ Zapisać całą tablicę do localStorage - jest
 		
 					lsGet.push(addObject);
 		
-					console.log(lsGet);
-					console.log(lsGet[4]);
+				
 					}
 					newObjt();
-				
+					console.log(lsGet);
+					console.log(lsGet[4]);
 					}
 			
 			validiate();

@@ -206,7 +206,37 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    //sortowanie po dacie od najblizszej do najdalszej
+    document.querySelectorAll("#byDate").forEach(function(button){
+        button.addEventListener("click", function(e){
+            e.preventDefault();
 
+            tasks = tasks.sort(function (a, b) {
+                return parseInt(a.date.replace(/-/g, ""), 10) - parseInt(b.date.replace(/-/g, ""), 10);
+            });
+
+            console.log(tasks);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            location.reload();
+
+        });
+    });
+
+//sortowanie po priorytecie od 1 w gore
+    document.querySelectorAll("#byPrior").forEach(function(button){
+        button.addEventListener("click", function(e){
+            e.preventDefault();
+
+            tasks.sort(function (a, b) {
+                return parseInt(a.priority, 10) - parseInt(b.priority, 10);
+            });
+
+            console.log(tasks);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            location.reload();
+
+        });
+    });
 
 
 });

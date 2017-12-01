@@ -6,6 +6,7 @@ if(localStorage.getItem("toDoStorage") === null) {
     localStorage.setItem("toDoStorage", JSON.stringify(tasks));
 }else{
     var tasks = JSON.parse(localStorage.getItem("toDoStorage"));
+    console.log(tasks);
 }
 
 // i przechodzimy po wszystkich elementach i ladujemy je na stronie
@@ -40,12 +41,16 @@ tasks.forEach(function(element) {
     //dodawanie buttona delete z klasa del
     var newDelBtn = document.createElement("button");
     newDelBtn.innerText = "Delete";
+    newDelBtn.dataset.id = element.id;
     newDelBtn.setAttribute("class", "del");
 
     newDelBtn.addEventListener("click", function (e) {
         var ul = this.parentElement;
         ul.parentElement.removeChild(ul);
         e.preventDefault();
+
+        deleteRecord(element.id);
+
     });
 
     newUl.appendChild(newDelBtn);
@@ -134,12 +139,15 @@ submitButton.addEventListener("click", function(e) {
     //dodawanie buttona delete z klasa del
     var newDelBtn = document.createElement("button");
     newDelBtn.innerText = "Delete";
+    newDelBtn.dataset.id = calcId();
     newDelBtn.setAttribute("class", "del");
 
     newDelBtn.addEventListener("click", function (e) {
         var ul = this.parentElement;
         ul.parentElement.removeChild(ul);
         e.preventDefault();
+
+        deleteRecord(calcId());
     });
 
     newUl.appendChild(newDelBtn);
@@ -162,7 +170,7 @@ submitButton.addEventListener("click", function(e) {
     //tworzymy konstruktor dla dodawania wartosci do tablicy task
     var Con = function (title, date, priority, description, done) {
 
-        this.id = tasks.length + 1;
+        this.id = calcId();
         this.title = title;
         this.date = date;
         this.priority = priority;
@@ -254,3 +262,34 @@ whatIsDone.addEventListener("click", function (e) {
     location.reload();
 
 });
+
+//usuwanie rekordu za pomoca przycisku delete
+
+function deleteRecord(element) {
+
+    var tasks = JSON.parse(localStorage.getItem("toDoStorage"));
+
+    for(i=0; i<tasks.length; i++){
+        if(tasks[i].id === element){
+            tasks.splice(i, 1);
+        }
+    }
+    localStorage.setItem("toDoStorage", JSON.stringify(tasks));
+    location.reload();
+}
+
+// funckja obliczajaca ZAWSZE najwieksze id w tablicy
+
+function calcId() {
+
+    tasks.sort(function (a, b) {
+        return b.id - a.id;
+    });
+
+    if(tasks.length === 0){
+        var myId = 0;
+    }else{
+        myId = tasks[0].id + 1;
+    }
+    return myId;
+}

@@ -11,7 +11,9 @@ if(localStorage.getItem("toDoStorage") === null) {
 
 // i przechodzimy po wszystkich elementach i ladujemy je na stronie
 
-tasks.forEach(function(element) {
+function fetchTasks(){
+
+    tasks.forEach(function(element) {
 
     var herePush = document.getElementById("createList");
 
@@ -70,7 +72,8 @@ tasks.forEach(function(element) {
 
     herePush.appendChild(newUl);
 
-});
+  });
+}
 
 //zmienne
 
@@ -265,6 +268,7 @@ whatIsDone.addEventListener("click", function (e) {
 
 //usuwanie rekordu za pomoca przycisku delete
 
+
 function deleteRecord(element) {
 
     var tasks = JSON.parse(localStorage.getItem("toDoStorage"));
@@ -275,6 +279,7 @@ function deleteRecord(element) {
         }
     }
     localStorage.setItem("toDoStorage", JSON.stringify(tasks));
+    fetchTasks();
     location.reload();
 }
 

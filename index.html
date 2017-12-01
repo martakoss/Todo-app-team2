@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Our first app- Team II</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,18 +26,18 @@
     <h4>Poniezej znajduje sie Twoja indywidualna lista zadan, posortuj odpowiednio powyzszymi przyciskami</h4>
     <div id="createList">
         <ul>
-            <li>Tytul zadania</li>
+            <li>Tytul przykladowego zadania</li>
             <li>Data wykonania</li>
             <li>Klasa priorytetu (1-5)</li>
-            <li>Krotki opis zadania</li>
+            <li>Twoj krotki opis zadania</li>
             <li>Czy zadanie zostalo wykonane (True, False)</li>
         </ul>
         <ul>
-            <li>Pierwsze przykladowe zadanie</li>
+            <li>Tak moze wygladac Twoje pierwsze zadanie</li>
             <li>2017-12-01</li>
-            <li>3</li>
-            <li>Nasza pierwsza wspolna aplikacja</li>
-            <li>False</li>
+            <li>1</li>
+            <li>Poznaj zasady dzialania local Storage</li>
+            <li>Not yet (false)</li>
         </ul>
     </div>
 
@@ -46,7 +45,7 @@
 
 <section class="addRecord">
 
-    <form>
+    <form id="myForm">
         <div class="formGroup">
             <label>
                 Tytul zadania:
@@ -76,7 +75,7 @@
             </label>
         </div>
         <p>
-            <button class="btnPrimary">Zatwierdź</button>
+            <button  type="submit" class="btnPrimary">Zatwierdź</button>
         </p>
     </form>
 

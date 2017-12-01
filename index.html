@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <title>Our first app- Team II</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
 
+<div class="container">
 <header>
-    <h1>Nasza pierwsza wspolna aplikacja</h1>
-    <p>Opis...</p>
+    <h1>Task manager application</h1>
 </header>
 
 <section class="sortButtons">
     <button id="byDate"> Sort by date</button>
     <button id="byPrior">Sort by priority</button>
     <button id="byWhatToDo">Sort by what to do next</button>
-    <button id="byWhatsDone">Sort what's done</button>
+    <button id="byWhatsDone">Sort by what's done</button>
 </section>
 
 <section class="lists">
 
-    <h4>Poniezej znajduje sie Twoja indywidualna lista zadan, posortuj odpowiednio powyzszymi przyciskami</h4>
+    <div><h4>Please find below your individual list of tasks.To sort it use the above buttons. The completed tasks are in green. <div> </h4>
     <div id="createList">
         <ul>
             <li>Tytul zadania</li>
@@ -47,15 +49,15 @@
     <form>
         <div class="formGroup">
             <label>
-                Tytul zadania:
+                Task's title:
                 <input type="text" id="title" name="title">
             </label>
             <label>
-                Termin wykonania:
-                <input type="text" id="date" name="date">
+                Completion deadline:
+                <input type="date" id="date" name="date">
             </label>
             <label>
-                Priorytet:
+                Priority:
                 <select id="prior" name="prior">
                     <option>1</option>
                     <option>2</option>
@@ -65,24 +67,25 @@
                 </select>
             </label>
             <label>
-                Opis:
+                Description:
                 <input type="text" id="desc" name="desc">
             </label>
             <label>
-                Czy zadanie wykonane ?:
+                Is the task completed?:
                 <input type="checkbox" id="done" name="done">
             </label>
         </div>
         <p>
-            <button class="btnPrimary">Zatwierdź</button>
+            <button class="btnPrimary">Confirm</button>
         </p>
     </form>
 
 </section>
 
 <footer class="authors">
-    <p>Team II</p>
+    <p>Application is prepared by Team II</p>
 </footer>
+</div>
 
 <script src="js/app.js"></script>
 </body>

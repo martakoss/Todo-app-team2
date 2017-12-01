@@ -30,6 +30,15 @@ h1 {
     font-size: 2rem;
 }
 
+#createList {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 auto;
+}
+
 .sortButtons button, .btnPrimary {
     color: white;
     height: 40px;

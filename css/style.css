@@ -3,13 +3,119 @@
 }
 
 body {
-    background: grey;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.container {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+header, .sortButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 30px auto;
+    text-transform: uppercase;
+    color: #28B463;
+    font-size: 2rem;
+}
+
+.sortButtons button, .btnPrimary {
+    color: white;
+    height: 40px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 5px;
+    background-color: #186A3B;
+}
+
+.addRecord {
+    display: flex;
+    justify-content: center;
+}
+
+div h4 {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    color: black;
+}
+
+
 ul {
-    background: red;
+    background: lightgrey;
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    border: 2px solid grey;
+}
+
+
+li {
+    margin: 3px;
+    list-style: circle;
+    width: 100%;
+}
+
+.del, .done {
+    width: 15%;
+    align-self: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 .hide {
     background: green;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    justify-content: center;
+    align-content: center;
+    min-height: 300px;
+    width: 600px;
+    background-color: #7DCEA0;
+}
+
+.formGroup label {
+    margin: 10px;
+    font-weight: bold;
+    color: #4D5656;
+}
+
+form p {
+    display: flex;
+    justify-content: center;
+}
+
+form .btnPrimary {
+    width: 25%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #7DCEA0;
+    align-self: center;
+    background: white;
+    font-weight: bolder;
+    width: 30%;
+    margin: 0 auto 40px;
 }

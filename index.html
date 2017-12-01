@@ -9,81 +9,82 @@
 
 <body>
 
-<header>
-    <h1>Nasza pierwsza wspolna aplikacja</h1>
-    <p>Opis...</p>
-</header>
+<div class="container">
+    <header>
+        <h1>Task manager application</h1>
+    </header>
 
-<section class="sortButtons">
-    <button id="byDate"> Sort by date</button>
-    <button id="byPrior">Sort by priority</button>
-    <button id="byWhatToDo">Sort by what to do next</button>
-    <button id="byWhatsDone">Sort what's done</button>
-</section>
+    <section class="sortButtons">
+        <button id="byDate"> Sort by date</button>
+        <button id="byPrior">Sort by priority</button>
+        <button id="byWhatToDo">Sort by what to do next</button>
+        <button id="byWhatsDone">Sort by what's done</button>
+    </section>
 
-<section class="lists">
+    <section class="lists">
 
-    <h4>Poniezej znajduje sie Twoja indywidualna lista zadan, posortuj odpowiednio powyzszymi przyciskami</h4>
-    <div id="createList">
-        <ul>
-            <li>Tytul przykladowego zadania</li>
-            <li>Data wykonania</li>
-            <li>Klasa priorytetu (1-5)</li>
-            <li>Twoj krotki opis zadania</li>
-            <li>Czy zadanie zostalo wykonane (True, False)</li>
-        </ul>
-        <ul>
-            <li>Tak moze wygladac Twoje pierwsze zadanie</li>
-            <li>2017-12-01</li>
-            <li>1</li>
-            <li>Poznaj zasady dzialania local Storage</li>
-            <li>Not yet (false)</li>
-        </ul>
-    </div>
+        <div><h4>Please find below your individual list of tasks.To sort it use the above buttons. The completed tasks are in green.</h4></div>
+            <div id="createList">
+                <ul>
+                    <li>Tytul zadania</li>
+                    <li>Data wykonania</li>
+                    <li>Klasa priorytetu (1-5)</li>
+                    <li>Krotki opis zadania</li>
+                    <li>Czy zadanie zostalo wykonane (True, False)</li>
+                </ul>
+                <ul>
+                    <li>Pierwsze przykladowe zadanie</li>
+                    <li>2017-12-01</li>
+                    <li>3</li>
+                    <li>Nasza pierwsza wspolna aplikacja</li>
+                    <li>False</li>
+                </ul>
+            </div>
 
-</section>
+    </section>
 
-<section class="addRecord">
+    <section class="addRecord">
 
-    <form id="myForm">
-        <div class="formGroup">
-            <label>
-                Tytul zadania:
-                <input type="text" id="title" name="title">
-            </label>
-            <label>
-                Termin wykonania:
-                <input type="date" id="date" name="date">
-            </label>
-            <label>
-                Priorytet:
-                <select id="prior" name="prior">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </label>
-            <label>
-                Opis:
-                <input type="text" id="desc" name="desc">
-            </label>
-            <label>
-                Czy zadanie wykonane ?:
-                <input type="checkbox" id="done" name="done">
-            </label>
-        </div>
-        <p>
-            <button  type="submit" class="btnPrimary">Zatwierdź</button>
-        </p>
-    </form>
+        <form id="myForm">
+            <div class="formGroup">
+                <label>
+                    Task's title:
+                    <input type="text" id="title" name="title">
+                </label>
+                <label>
+                    Completion deadline:
+                    <input type="date" id="date" name="date">
+                </label>
+                <label>
+                    Priority:
+                    <select id="prior" name="prior">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </label>
+                <label>
+                    Description:
+                    <input type="text" id="desc" name="desc">
+                </label>
+                <label>
+                    Is the task completed?:
+                    <input type="checkbox" id="done" name="done">
+                </label>
+            </div>
+            <p>
+                <button class="btnPrimary">Confirm</button>
+            </p>
+        </form>
 
-</section>
+    </section>
 
-<footer class="authors">
-    <p>Team II</p>
-</footer>
+    <footer class="authors">
+        <p>Application is prepared by Team II</p>
+    </footer>
+</div>
 
 <script src="js/app.js"></script>
 </body>

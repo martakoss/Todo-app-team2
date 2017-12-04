@@ -11,8 +11,6 @@ if(localStorage.getItem("toDoStorage") === null) {
 
 // i przechodzimy po wszystkich elementach i ladujemy je na stronie
 
-function fetchTasks(){
-
     tasks.forEach(function(element) {
 
     var herePush = document.getElementById("createList");
@@ -52,6 +50,7 @@ function fetchTasks(){
         e.preventDefault();
 
         deleteRecord(element.id);
+        
 
     });
 
@@ -73,7 +72,7 @@ function fetchTasks(){
     herePush.appendChild(newUl);
 
   });
-}
+
 
 //zmienne
 
@@ -279,8 +278,8 @@ function deleteRecord(element) {
         }
     }
     localStorage.setItem("toDoStorage", JSON.stringify(tasks));
-    fetchTasks();
     location.reload();
+
 }
 
 // funckja obliczajaca ZAWSZE najwieksze id w tablicy
